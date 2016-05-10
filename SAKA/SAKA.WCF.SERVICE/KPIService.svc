@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SAKA.WCF.SERVICE.KPIService" CodeBehind="KPIService.svc.cs" %>

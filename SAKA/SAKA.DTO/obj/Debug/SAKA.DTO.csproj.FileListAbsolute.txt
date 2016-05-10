@@ -1,0 +1,5 @@
+C:\Users\SOFTWARE\Source\Repos\Deneme\SAKA\SAKA.DTO\bin\Debug\SAKA.DTO.dll.config
+C:\Users\SOFTWARE\Source\Repos\Deneme\SAKA\SAKA.DTO\bin\Debug\SAKA.DTO.dll
+C:\Users\SOFTWARE\Source\Repos\Deneme\SAKA\SAKA.DTO\bin\Debug\SAKA.DTO.pdb
+C:\Users\SOFTWARE\Source\Repos\Deneme\SAKA\SAKA.DTO\obj\Debug\SAKA.DTO.dll
+C:\Users\SOFTWARE\Source\Repos\Deneme\SAKA\SAKA.DTO\obj\Debug\SAKA.DTO.pdb
