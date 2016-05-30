@@ -5,3 +5,10 @@ C:\Users\SOFTWARE\Source\Repos\Deneme\SAKA\ClassLibrary1\bin\Debug\SAKA.DTO.pdb
 C:\Users\SOFTWARE\Source\Repos\Deneme\SAKA\ClassLibrary1\obj\Debug\SAKA.Bussiness.csprojResolveAssemblyReference.cache
 C:\Users\SOFTWARE\Source\Repos\Deneme\SAKA\ClassLibrary1\obj\Debug\ClassLibrary1.dll
 C:\Users\SOFTWARE\Source\Repos\Deneme\SAKA\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\ClassLibrary1\bin\Debug\SAKA.DTO.dll
+C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\ClassLibrary1\bin\Debug\SAKA.DTO.pdb
+C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\ClassLibrary1\obj\Debug\SAKA.Bussiness.csprojResolveAssemblyReference.cache
+C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

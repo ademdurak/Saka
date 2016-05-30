@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ServiceModel;
+using SAKA.DTO;
 
 namespace SAKA.Service.Contract
 {
@@ -11,8 +12,8 @@ namespace SAKA.Service.Contract
     public interface IKPIService
     {
         [OperationContract]
-         int count();
+        ScoreCard[] GetScorecard();
         [OperationContract]
-        int Hesapla(int x,int y);
+        DTO_Gauge[] GetGauge();
     }
 }

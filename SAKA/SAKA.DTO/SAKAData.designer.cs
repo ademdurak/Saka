@@ -33,12 +33,12 @@ namespace SAKA.DTO
     partial void InsertKPI_Value(KPI_Value instance);
     partial void UpdateKPI_Value(KPI_Value instance);
     partial void DeleteKPI_Value(KPI_Value instance);
-    partial void InsertKPI_Calculation_Log(KPI_Calculation_Log instance);
-    partial void UpdateKPI_Calculation_Log(KPI_Calculation_Log instance);
-    partial void DeleteKPI_Calculation_Log(KPI_Calculation_Log instance);
     partial void InsertKPI(KPI instance);
     partial void UpdateKPI(KPI instance);
     partial void DeleteKPI(KPI instance);
+    partial void InsertKPI_Calculation_Log(KPI_Calculation_Log instance);
+    partial void UpdateKPI_Calculation_Log(KPI_Calculation_Log instance);
+    partial void DeleteKPI_Calculation_Log(KPI_Calculation_Log instance);
     #endregion
 		
 		public SAKADataDataContext() : 
@@ -79,19 +79,19 @@ namespace SAKA.DTO
 			}
 		}
 		
-		public System.Data.Linq.Table<KPI_Calculation_Log> KPI_Calculation_Logs
-		{
-			get
-			{
-				return this.GetTable<KPI_Calculation_Log>();
-			}
-		}
-		
 		public System.Data.Linq.Table<KPI> KPIs
 		{
 			get
 			{
 				return this.GetTable<KPI>();
+			}
+		}
+		
+		public System.Data.Linq.Table<KPI_Calculation_Log> KPI_Calculation_Logs
+		{
+			get
+			{
+				return this.GetTable<KPI_Calculation_Log>();
 			}
 		}
 	}
@@ -104,15 +104,21 @@ namespace SAKA.DTO
 		
 		private System.Guid _KPI_ID;
 		
-		private decimal _Value;
-		
 		private System.DateTime _Date;
+		
+		private decimal _Value;
 		
 		private decimal _Target;
 		
-		private decimal _Thresholder;
+		private decimal _Threshold;
 		
-		private bool _Thresholder_Type;
+		private bool _ThresholdType;
+		
+		private System.DateTime _CreationDate;
+		
+		private System.Nullable<System.DateTime> _ModificationDate;
+		
+		private int _Deleted;
 		
 		private EntityRef<KPI> _KPI;
 		
@@ -122,16 +128,22 @@ namespace SAKA.DTO
     partial void OnCreated();
     partial void OnKPI_IDChanging(System.Guid value);
     partial void OnKPI_IDChanged();
-    partial void OnValueChanging(decimal value);
-    partial void OnValueChanged();
     partial void OnDateChanging(System.DateTime value);
     partial void OnDateChanged();
+    partial void OnValueChanging(decimal value);
+    partial void OnValueChanged();
     partial void OnTargetChanging(decimal value);
     partial void OnTargetChanged();
-    partial void OnThresholderChanging(decimal value);
-    partial void OnThresholderChanged();
-    partial void OnThresholder_TypeChanging(bool value);
-    partial void OnThresholder_TypeChanged();
+    partial void OnThresholdChanging(decimal value);
+    partial void OnThresholdChanged();
+    partial void OnThresholdTypeChanging(bool value);
+    partial void OnThresholdTypeChanged();
+    partial void OnCreationDateChanging(System.DateTime value);
+    partial void OnCreationDateChanged();
+    partial void OnModificationDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnModificationDateChanged();
+    partial void OnDeletedChanging(int value);
+    partial void OnDeletedChanged();
     #endregion
 		
 		public KPI_Value()
@@ -164,26 +176,6 @@ namespace SAKA.DTO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Value", DbType="Decimal(12,2) NOT NULL")]
-		public decimal Value
-		{
-			get
-			{
-				return this._Value;
-			}
-			set
-			{
-				if ((this._Value != value))
-				{
-					this.OnValueChanging(value);
-					this.SendPropertyChanging();
-					this._Value = value;
-					this.SendPropertyChanged("Value");
-					this.OnValueChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date", DbType="Date NOT NULL", IsPrimaryKey=true)]
 		public System.DateTime Date
 		{
@@ -200,6 +192,26 @@ namespace SAKA.DTO
 					this._Date = value;
 					this.SendPropertyChanged("Date");
 					this.OnDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Value", DbType="Decimal(12,2) NOT NULL")]
+		public decimal Value
+		{
+			get
+			{
+				return this._Value;
+			}
+			set
+			{
+				if ((this._Value != value))
+				{
+					this.OnValueChanging(value);
+					this.SendPropertyChanging();
+					this._Value = value;
+					this.SendPropertyChanged("Value");
+					this.OnValueChanged();
 				}
 			}
 		}
@@ -224,42 +236,102 @@ namespace SAKA.DTO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Thresholder", DbType="Decimal(12,2) NOT NULL")]
-		public decimal Thresholder
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Threshold", DbType="Decimal(12,2) NOT NULL")]
+		public decimal Threshold
 		{
 			get
 			{
-				return this._Thresholder;
+				return this._Threshold;
 			}
 			set
 			{
-				if ((this._Thresholder != value))
+				if ((this._Threshold != value))
 				{
-					this.OnThresholderChanging(value);
+					this.OnThresholdChanging(value);
 					this.SendPropertyChanging();
-					this._Thresholder = value;
-					this.SendPropertyChanged("Thresholder");
-					this.OnThresholderChanged();
+					this._Threshold = value;
+					this.SendPropertyChanged("Threshold");
+					this.OnThresholdChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Thresholder_Type", DbType="Bit NOT NULL")]
-		public bool Thresholder_Type
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThresholdType", DbType="Bit NOT NULL")]
+		public bool ThresholdType
 		{
 			get
 			{
-				return this._Thresholder_Type;
+				return this._ThresholdType;
 			}
 			set
 			{
-				if ((this._Thresholder_Type != value))
+				if ((this._ThresholdType != value))
 				{
-					this.OnThresholder_TypeChanging(value);
+					this.OnThresholdTypeChanging(value);
 					this.SendPropertyChanging();
-					this._Thresholder_Type = value;
-					this.SendPropertyChanged("Thresholder_Type");
-					this.OnThresholder_TypeChanged();
+					this._ThresholdType = value;
+					this.SendPropertyChanged("ThresholdType");
+					this.OnThresholdTypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreationDate", DbType="Date NOT NULL")]
+		public System.DateTime CreationDate
+		{
+			get
+			{
+				return this._CreationDate;
+			}
+			set
+			{
+				if ((this._CreationDate != value))
+				{
+					this.OnCreationDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreationDate = value;
+					this.SendPropertyChanged("CreationDate");
+					this.OnCreationDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModificationDate", DbType="Date")]
+		public System.Nullable<System.DateTime> ModificationDate
+		{
+			get
+			{
+				return this._ModificationDate;
+			}
+			set
+			{
+				if ((this._ModificationDate != value))
+				{
+					this.OnModificationDateChanging(value);
+					this.SendPropertyChanging();
+					this._ModificationDate = value;
+					this.SendPropertyChanged("ModificationDate");
+					this.OnModificationDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Int NOT NULL")]
+		public int Deleted
+		{
+			get
+			{
+				return this._Deleted;
+			}
+			set
+			{
+				if ((this._Deleted != value))
+				{
+					this.OnDeletedChanging(value);
+					this.SendPropertyChanging();
+					this._Deleted = value;
+					this.SendPropertyChanged("Deleted");
+					this.OnDeletedChanged();
 				}
 			}
 		}
@@ -316,6 +388,364 @@ namespace SAKA.DTO
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.KPI")]
+	public partial class KPI : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private System.Guid _ID;
+		
+		private string _Name;
+		
+		private decimal _Target;
+		
+		private string _Unit;
+		
+		private bool _ThresholdType;
+		
+		private decimal _Threshold;
+		
+		private char _Period;
+		
+		private System.Nullable<bool> _Direction;
+		
+		private System.DateTime _CreationDate;
+		
+		private System.Nullable<System.DateTime> _ModificationDate;
+		
+		private int _Deleted;
+		
+		private EntitySet<KPI_Value> _KPI_Values;
+		
+		private EntitySet<KPI_Calculation_Log> _KPI_Calculation_Logs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(System.Guid value);
+    partial void OnIDChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnTargetChanging(decimal value);
+    partial void OnTargetChanged();
+    partial void OnUnitChanging(string value);
+    partial void OnUnitChanged();
+    partial void OnThresholdTypeChanging(bool value);
+    partial void OnThresholdTypeChanged();
+    partial void OnThresholdChanging(decimal value);
+    partial void OnThresholdChanged();
+    partial void OnPeriodChanging(char value);
+    partial void OnPeriodChanged();
+    partial void OnDirectionChanging(System.Nullable<bool> value);
+    partial void OnDirectionChanged();
+    partial void OnCreationDateChanging(System.DateTime value);
+    partial void OnCreationDateChanged();
+    partial void OnModificationDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnModificationDateChanged();
+    partial void OnDeletedChanging(int value);
+    partial void OnDeletedChanged();
+    #endregion
+		
+		public KPI()
+		{
+			this._KPI_Values = new EntitySet<KPI_Value>(new Action<KPI_Value>(this.attach_KPI_Values), new Action<KPI_Value>(this.detach_KPI_Values));
+			this._KPI_Calculation_Logs = new EntitySet<KPI_Calculation_Log>(new Action<KPI_Calculation_Log>(this.attach_KPI_Calculation_Logs), new Action<KPI_Calculation_Log>(this.detach_KPI_Calculation_Logs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="UniqueIdentifier NOT NULL", IsPrimaryKey=true)]
+		public System.Guid ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(400) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Target", DbType="Decimal(12,2) NOT NULL")]
+		public decimal Target
+		{
+			get
+			{
+				return this._Target;
+			}
+			set
+			{
+				if ((this._Target != value))
+				{
+					this.OnTargetChanging(value);
+					this.SendPropertyChanging();
+					this._Target = value;
+					this.SendPropertyChanged("Target");
+					this.OnTargetChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Unit", DbType="NVarChar(30)")]
+		public string Unit
+		{
+			get
+			{
+				return this._Unit;
+			}
+			set
+			{
+				if ((this._Unit != value))
+				{
+					this.OnUnitChanging(value);
+					this.SendPropertyChanging();
+					this._Unit = value;
+					this.SendPropertyChanged("Unit");
+					this.OnUnitChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThresholdType", DbType="Bit NOT NULL")]
+		public bool ThresholdType
+		{
+			get
+			{
+				return this._ThresholdType;
+			}
+			set
+			{
+				if ((this._ThresholdType != value))
+				{
+					this.OnThresholdTypeChanging(value);
+					this.SendPropertyChanging();
+					this._ThresholdType = value;
+					this.SendPropertyChanged("ThresholdType");
+					this.OnThresholdTypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Threshold", DbType="Decimal(12,2) NOT NULL")]
+		public decimal Threshold
+		{
+			get
+			{
+				return this._Threshold;
+			}
+			set
+			{
+				if ((this._Threshold != value))
+				{
+					this.OnThresholdChanging(value);
+					this.SendPropertyChanging();
+					this._Threshold = value;
+					this.SendPropertyChanged("Threshold");
+					this.OnThresholdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Period", DbType="Char(1) NOT NULL")]
+		public char Period
+		{
+			get
+			{
+				return this._Period;
+			}
+			set
+			{
+				if ((this._Period != value))
+				{
+					this.OnPeriodChanging(value);
+					this.SendPropertyChanging();
+					this._Period = value;
+					this.SendPropertyChanged("Period");
+					this.OnPeriodChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Direction", DbType="Bit")]
+		public System.Nullable<bool> Direction
+		{
+			get
+			{
+				return this._Direction;
+			}
+			set
+			{
+				if ((this._Direction != value))
+				{
+					this.OnDirectionChanging(value);
+					this.SendPropertyChanging();
+					this._Direction = value;
+					this.SendPropertyChanged("Direction");
+					this.OnDirectionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreationDate", DbType="Date NOT NULL")]
+		public System.DateTime CreationDate
+		{
+			get
+			{
+				return this._CreationDate;
+			}
+			set
+			{
+				if ((this._CreationDate != value))
+				{
+					this.OnCreationDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreationDate = value;
+					this.SendPropertyChanged("CreationDate");
+					this.OnCreationDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModificationDate", DbType="Date")]
+		public System.Nullable<System.DateTime> ModificationDate
+		{
+			get
+			{
+				return this._ModificationDate;
+			}
+			set
+			{
+				if ((this._ModificationDate != value))
+				{
+					this.OnModificationDateChanging(value);
+					this.SendPropertyChanging();
+					this._ModificationDate = value;
+					this.SendPropertyChanged("ModificationDate");
+					this.OnModificationDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Int NOT NULL")]
+		public int Deleted
+		{
+			get
+			{
+				return this._Deleted;
+			}
+			set
+			{
+				if ((this._Deleted != value))
+				{
+					this.OnDeletedChanging(value);
+					this.SendPropertyChanging();
+					this._Deleted = value;
+					this.SendPropertyChanged("Deleted");
+					this.OnDeletedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KPI_KPI_Value", Storage="_KPI_Values", ThisKey="ID", OtherKey="KPI_ID")]
+		public EntitySet<KPI_Value> KPI_Values
+		{
+			get
+			{
+				return this._KPI_Values;
+			}
+			set
+			{
+				this._KPI_Values.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KPI_KPI_Calculation_Log", Storage="_KPI_Calculation_Logs", ThisKey="ID", OtherKey="KPI_ID")]
+		public EntitySet<KPI_Calculation_Log> KPI_Calculation_Logs
+		{
+			get
+			{
+				return this._KPI_Calculation_Logs;
+			}
+			set
+			{
+				this._KPI_Calculation_Logs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_KPI_Values(KPI_Value entity)
+		{
+			this.SendPropertyChanging();
+			entity.KPI = this;
+		}
+		
+		private void detach_KPI_Values(KPI_Value entity)
+		{
+			this.SendPropertyChanging();
+			entity.KPI = null;
+		}
+		
+		private void attach_KPI_Calculation_Logs(KPI_Calculation_Log entity)
+		{
+			this.SendPropertyChanging();
+			entity.KPI = this;
+		}
+		
+		private void detach_KPI_Calculation_Logs(KPI_Calculation_Log entity)
+		{
+			this.SendPropertyChanging();
+			entity.KPI = null;
 		}
 	}
 	
@@ -515,316 +945,6 @@ namespace SAKA.DTO
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.KPI")]
-	public partial class KPI : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private System.Guid _ID;
-		
-		private string _Name;
-		
-		private decimal _Target;
-		
-		private char _Period;
-		
-		private decimal _Thresholder;
-		
-		private bool _Thresholder_Type;
-		
-		private string _Unit;
-		
-		private System.Nullable<System.DateTime> _ModificationDate;
-		
-		private System.DateTime _CreationDate;
-		
-		private EntitySet<KPI_Value> _KPI_Values;
-		
-		private EntitySet<KPI_Calculation_Log> _KPI_Calculation_Logs;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDChanging(System.Guid value);
-    partial void OnIDChanged();
-    partial void OnNameChanging(string value);
-    partial void OnNameChanged();
-    partial void OnTargetChanging(decimal value);
-    partial void OnTargetChanged();
-    partial void OnPeriodChanging(char value);
-    partial void OnPeriodChanged();
-    partial void OnThresholderChanging(decimal value);
-    partial void OnThresholderChanged();
-    partial void OnThresholder_TypeChanging(bool value);
-    partial void OnThresholder_TypeChanged();
-    partial void OnUnitChanging(string value);
-    partial void OnUnitChanged();
-    partial void OnModificationDateChanging(System.Nullable<System.DateTime> value);
-    partial void OnModificationDateChanged();
-    partial void OnCreationDateChanging(System.DateTime value);
-    partial void OnCreationDateChanged();
-    #endregion
-		
-		public KPI()
-		{
-			this._KPI_Values = new EntitySet<KPI_Value>(new Action<KPI_Value>(this.attach_KPI_Values), new Action<KPI_Value>(this.detach_KPI_Values));
-			this._KPI_Calculation_Logs = new EntitySet<KPI_Calculation_Log>(new Action<KPI_Calculation_Log>(this.attach_KPI_Calculation_Logs), new Action<KPI_Calculation_Log>(this.detach_KPI_Calculation_Logs));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="UniqueIdentifier NOT NULL", IsPrimaryKey=true)]
-		public System.Guid ID
-		{
-			get
-			{
-				return this._ID;
-			}
-			set
-			{
-				if ((this._ID != value))
-				{
-					this.OnIDChanging(value);
-					this.SendPropertyChanging();
-					this._ID = value;
-					this.SendPropertyChanged("ID");
-					this.OnIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(400) NOT NULL", CanBeNull=false)]
-		public string Name
-		{
-			get
-			{
-				return this._Name;
-			}
-			set
-			{
-				if ((this._Name != value))
-				{
-					this.OnNameChanging(value);
-					this.SendPropertyChanging();
-					this._Name = value;
-					this.SendPropertyChanged("Name");
-					this.OnNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Target", DbType="Decimal(12,2) NOT NULL")]
-		public decimal Target
-		{
-			get
-			{
-				return this._Target;
-			}
-			set
-			{
-				if ((this._Target != value))
-				{
-					this.OnTargetChanging(value);
-					this.SendPropertyChanging();
-					this._Target = value;
-					this.SendPropertyChanged("Target");
-					this.OnTargetChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Period", DbType="Char(1) NOT NULL")]
-		public char Period
-		{
-			get
-			{
-				return this._Period;
-			}
-			set
-			{
-				if ((this._Period != value))
-				{
-					this.OnPeriodChanging(value);
-					this.SendPropertyChanging();
-					this._Period = value;
-					this.SendPropertyChanged("Period");
-					this.OnPeriodChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Thresholder", DbType="Decimal(12,2) NOT NULL")]
-		public decimal Thresholder
-		{
-			get
-			{
-				return this._Thresholder;
-			}
-			set
-			{
-				if ((this._Thresholder != value))
-				{
-					this.OnThresholderChanging(value);
-					this.SendPropertyChanging();
-					this._Thresholder = value;
-					this.SendPropertyChanged("Thresholder");
-					this.OnThresholderChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Thresholder_Type", DbType="Bit NOT NULL")]
-		public bool Thresholder_Type
-		{
-			get
-			{
-				return this._Thresholder_Type;
-			}
-			set
-			{
-				if ((this._Thresholder_Type != value))
-				{
-					this.OnThresholder_TypeChanging(value);
-					this.SendPropertyChanging();
-					this._Thresholder_Type = value;
-					this.SendPropertyChanged("Thresholder_Type");
-					this.OnThresholder_TypeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Unit", DbType="NVarChar(30)")]
-		public string Unit
-		{
-			get
-			{
-				return this._Unit;
-			}
-			set
-			{
-				if ((this._Unit != value))
-				{
-					this.OnUnitChanging(value);
-					this.SendPropertyChanging();
-					this._Unit = value;
-					this.SendPropertyChanged("Unit");
-					this.OnUnitChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModificationDate", DbType="Date")]
-		public System.Nullable<System.DateTime> ModificationDate
-		{
-			get
-			{
-				return this._ModificationDate;
-			}
-			set
-			{
-				if ((this._ModificationDate != value))
-				{
-					this.OnModificationDateChanging(value);
-					this.SendPropertyChanging();
-					this._ModificationDate = value;
-					this.SendPropertyChanged("ModificationDate");
-					this.OnModificationDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreationDate", DbType="Date NOT NULL")]
-		public System.DateTime CreationDate
-		{
-			get
-			{
-				return this._CreationDate;
-			}
-			set
-			{
-				if ((this._CreationDate != value))
-				{
-					this.OnCreationDateChanging(value);
-					this.SendPropertyChanging();
-					this._CreationDate = value;
-					this.SendPropertyChanged("CreationDate");
-					this.OnCreationDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KPI_KPI_Value", Storage="_KPI_Values", ThisKey="ID", OtherKey="KPI_ID")]
-		public EntitySet<KPI_Value> KPI_Values
-		{
-			get
-			{
-				return this._KPI_Values;
-			}
-			set
-			{
-				this._KPI_Values.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KPI_KPI_Calculation_Log", Storage="_KPI_Calculation_Logs", ThisKey="ID", OtherKey="KPI_ID")]
-		public EntitySet<KPI_Calculation_Log> KPI_Calculation_Logs
-		{
-			get
-			{
-				return this._KPI_Calculation_Logs;
-			}
-			set
-			{
-				this._KPI_Calculation_Logs.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_KPI_Values(KPI_Value entity)
-		{
-			this.SendPropertyChanging();
-			entity.KPI = this;
-		}
-		
-		private void detach_KPI_Values(KPI_Value entity)
-		{
-			this.SendPropertyChanging();
-			entity.KPI = null;
-		}
-		
-		private void attach_KPI_Calculation_Logs(KPI_Calculation_Log entity)
-		{
-			this.SendPropertyChanging();
-			entity.KPI = this;
-		}
-		
-		private void detach_KPI_Calculation_Logs(KPI_Calculation_Log entity)
-		{
-			this.SendPropertyChanging();
-			entity.KPI = null;
 		}
 	}
 }

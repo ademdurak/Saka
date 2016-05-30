@@ -1,11 +1,13 @@
-﻿using SAKA.Service.Contract;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
-using ClassLibrary1;
+using SAKA.Service.Contract;
+using SAKA.Bussiness;
+using SAKA.DTO;
+
 
 namespace SAKA.WCF.SERVICE
 {
@@ -13,15 +15,15 @@ namespace SAKA.WCF.SERVICE
     // NOTE: In order to launch WCF Test Client for testing this service, please select KPIService.svc or KPIService.svc.cs at the Solution Explorer and start debugging.
     public class KPIService : IKPIService
     {
-        public int count()
+        public ScoreCard[] GetScorecard()
         {
-            return KPI.count();
+            return Kpi.GetScorecard();
         }
-        public int Hesapla(int x,int y)
+        public DTO_Gauge[] GetGauge()
         {
-            return KPI.Hesapla(x,y);
+            return Kpi.GetGauge();
         }
 
-       
+
     }
 }

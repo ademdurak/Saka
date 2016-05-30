@@ -15,11 +15,7 @@ namespace SAKA
         {
             var adress = new EndpointAddress("http://localhost:2651/KPIService.svc");
             var binding = new BasicHttpBinding();
-            var channel = ChannelFactory<IKPIService>.CreateChannel(binding, adress);
-            var count = channel.count();
-            var bas = channel.Hesapla(5,5);
-            Response.Write(count);
-            Response.Write("----->"+5+"*"+5+"="+bas);
+            var channel = ChannelFactory<IKPIService>.CreateChannel(binding, adress);            
         }
     }
 }

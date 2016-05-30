@@ -8,9 +8,12 @@ namespace SAKA.DTO
 {
     public class ScoreCard
     {
-        public string Name { get; set; }
-        public float Target { get; set; }
-        public float Value { get; set; }        
+        public string NAME { get; set; }
+        public decimal VALUE { get; set; }
+        public string UNIT { get; set; }
+        public DateTime DATE { get; set; }
+        public Period PERIOD { get; set; }
+        public Statu STATU { get; set; }
 
 
     }
