@@ -104,9 +104,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="image\green.gif" />
+    <Content Include="image\red.gif" />
+    <Content Include="image\triangle.png" />
+    <Content Include="image\yellow.gif" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BitMatImage.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
