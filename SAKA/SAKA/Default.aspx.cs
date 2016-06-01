@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.ServiceModel;
 using SAKA.Service.Contract;
 using SAKA.DTO;
+using System.Drawing;
 
 namespace SAKA
 {
