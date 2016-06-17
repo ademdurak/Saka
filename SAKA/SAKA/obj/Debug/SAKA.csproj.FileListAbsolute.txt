@@ -34,39 +34,3 @@ C:\Users\SOFTWARE\Source\Repos\Deneme\SAKA\SAKA\bin\Microsoft.CodeDom.Providers.
 C:\Users\SOFTWARE\Source\Repos\Deneme\SAKA\SAKA\obj\Debug\SAKA.csprojResolveAssemblyReference.cache
 C:\Users\SOFTWARE\Source\Repos\Deneme\SAKA\SAKA\obj\Debug\SAKA.dll
 C:\Users\SOFTWARE\Source\Repos\Deneme\SAKA\SAKA\obj\Debug\SAKA.pdb
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\roslyn\csc.exe
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\roslyn\vbc.exe
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\roslyn\VBCSCompiler.exe
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\SAKA.dll.config
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\SAKA.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\SAKA.pdb
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\Microsoft.AI.Agent.Intercept.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\Microsoft.AI.DependencyCollector.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\Microsoft.AI.PerfCounterCollector.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\Microsoft.AI.ServerTelemetryChannel.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\Microsoft.AI.Web.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\Microsoft.AI.WindowsServer.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\Microsoft.ApplicationInsights.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\SAKA.DTO.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\SAKA.Service.Contract.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\SAKA.DTO.pdb
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\SAKA.Service.Contract.pdb
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\Microsoft.AI.DependencyCollector.xml
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\Microsoft.AI.ServerTelemetryChannel.xml
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\Microsoft.AI.Web.xml
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\Microsoft.AI.WindowsServer.xml
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\Microsoft.ApplicationInsights.xml
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\obj\Debug\SAKA.csprojResolveAssemblyReference.cache
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\obj\Debug\SAKA.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA\obj\Debug\SAKA.pdb

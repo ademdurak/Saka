@@ -22,27 +22,3 @@ C:\Users\SOFTWARE\Source\Repos\Deneme\SAKA\SAKA.WCF.SERVICE\bin\Microsoft.Applic
 C:\Users\SOFTWARE\Source\Repos\Deneme\SAKA\SAKA.WCF.SERVICE\obj\Debug\SAKA.WCF.SERVICE.csprojResolveAssemblyReference.cache
 C:\Users\SOFTWARE\Source\Repos\Deneme\SAKA\SAKA.WCF.SERVICE\obj\Debug\SAKA.WCF.SERVICE.dll
 C:\Users\SOFTWARE\Source\Repos\Deneme\SAKA\SAKA.WCF.SERVICE\obj\Debug\SAKA.WCF.SERVICE.pdb
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\bin\SAKA.WCF.SERVICE.dll.config
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\bin\SAKA.WCF.SERVICE.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\bin\SAKA.WCF.SERVICE.pdb
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\bin\ClassLibrary1.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\bin\Microsoft.AI.Agent.Intercept.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\bin\Microsoft.AI.DependencyCollector.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\bin\Microsoft.AI.PerfCounterCollector.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\bin\Microsoft.AI.ServerTelemetryChannel.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\bin\Microsoft.AI.Web.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\bin\Microsoft.AI.WindowsServer.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\bin\Microsoft.ApplicationInsights.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\bin\SAKA.DTO.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\bin\SAKA.Service.Contract.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\bin\ClassLibrary1.pdb
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\bin\SAKA.DTO.pdb
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\bin\SAKA.Service.Contract.pdb
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\bin\Microsoft.AI.DependencyCollector.xml
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\bin\Microsoft.AI.ServerTelemetryChannel.xml
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\bin\Microsoft.AI.Web.xml
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\bin\Microsoft.AI.WindowsServer.xml
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\bin\Microsoft.ApplicationInsights.xml
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\obj\Debug\SAKA.WCF.SERVICE.csprojResolveAssemblyReference.cache
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\obj\Debug\SAKA.WCF.SERVICE.dll
-C:\Users\SOFTWARE\Documents\Visual Studio 2015\Projects\Saka\SAKA\SAKA.WCF.SERVICE\obj\Debug\SAKA.WCF.SERVICE.pdb
